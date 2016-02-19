@@ -110,6 +110,53 @@ Done
 ### Testing  
 The jumper destroyed everything except the flowers and jumped 2 spots. Done.
 
+# Part 4  
+
+## Set 7  
+1. act, getActors, processActors, getMoveLocations, selectMoveLocation, makeMove
+2. getActors, processActors, getMoveLocations, selectMoveLocation, makeMove  
+3. Yes, if the new critter subclass selects its actors from different locations than Critter class does, it will need to
+override this method.  
+4. use the processActors method, make and ArrayList of all their neighbors and process them,check the location that the Critter would move to and if that space is occupied don't move there.  
+5. To make a critter move, getmoveLocations gets the locations that the critter can move to, selectMoveLocations selects the location for that critter to move to and makeMove() moves the critter.  
+6. Critter extends Actor. The Actor class has a default constructor. If you do not create a constructor in a
+class, Java will write a default constructor for you. The Critter default constructor that Java provides will call
+super(), which calls the Actor default constructor. The Actor default constructor will make a blue critter
+that faces north.    
+
+## Set 8    
+1. The act method calls getActors, processActors, getMoveLocations, selectMoveLocation,
+and makeMove. The ChameleonCritter class overrides the processActors and makeMove
+methods. Therefore, calling act for a ChameleonCritter will produce different behavior than calling act
+for a Critter.  
+2. The makeMove method of the ChameleonCritter first changes the direction of the critter to face its new
+location. Then it calls super.makeMove of the Critter class to actually move to the new location. After it
+changes its direction, it behaves like (makeMove like) a Critter.  
+3.Add the code that makes Bug drops flowers into the Critter makeMove() methods, then adjust it for the Critter's specific properties.    
+4. It doesn't getActors differently from Critter so it doesn't a new method.  
+5. Actor   
+6. getGrid() method    
+
+## Set 9  
+1. CrabCritter does inherit the processActors method from Critter because it did not override the method.  
+2. The CrabCritter’s getActors method only looks for neighbors that are immediately in front of the crab
+critter and to its right-front and left-front locations.  
+3. The parameter for this method brings in an array of directions. For the crab critter, this array contains the directions of
+the possible neighbors that this crab can eat. The method getLocationsInDirections uses this array to
+determine and return valid adjacent locations of this critter in the directions given by the array parameter.  
+4. (4,3), (4,4), and (4,5) 
+5. The crab moves right to left randomly and a Critter just moves randomly across the grid, in all directions.  
+6. When it hits another actor, it turns.  
+7. A crab critter inherits the processActors method from the Critter class. This method only removes actors
+that are not rocks and not critters. Since a CrabCritter is a Critter, a crab critter will not eat any other
+critter.   
+
+## Exercises  
+1. Done  
+2. Done  
+3. Done
+
+
 
 
 
